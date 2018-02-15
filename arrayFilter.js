@@ -1,11 +1,5 @@
-const Animals = [
-    { name: "Fluffykins", species: "rabbit" },
-    { name: "Caro", species: "dog" },
-    { name: "Hamilton", species: "dog" },
-    { name: "Harold", species: "fish" },
-    { name: "Ursula", species: "cat" },
-    { name: "Jimmy", species: "fish" }
-]
+const Animals = require('./animals');
+// let animals = Animals.Animals;
 
 function selectDogs(arr) {
     let dogs = [];
@@ -18,3 +12,9 @@ function selectDogs(arr) {
 }
 let dogs = selectDogs(Animals);
 console.log(dogs);
+
+function selectDogsF(arr) {
+    return arr.filter(e => e.species === 'dog')
+}
+let dogsF = selectDogsF(Animals);
+console.log(dogsF);
